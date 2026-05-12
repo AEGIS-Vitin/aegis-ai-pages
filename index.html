@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEGIS-AI · Tu escudo IA contra sanciones · Ley 1/2025 + Verifactu</title>
+<meta name="description" content="AEGIS-AI by TRESAAA: asistente IA gratis que te dice si tu negocio cumple Ley 1/2025 (desperdicio alimentario) y Verifactu (julio 2027). Diagnóstico en 2 minutos.">
+<meta name="keywords" content="AEGIS, escudo IA, compliance Ley 1/2025, Verifactu, autónomos, sanciones, diagnóstico cumplimiento, IA legal España">
+<meta property="og:title" content="AEGIS-AI · Tu escudo IA contra sanciones">
+<meta property="og:description" content="Diagnóstico gratis en 2 min: ¿tu negocio está en riesgo?">
+<meta property="og:url" content="https://aegis-ai.es">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://aegis-ai.es/">
+<style>
+:root{--bg:#0A1628;--bg2:#0f1f3a;--accent:#00C9A7;--accent2:#00f5cd;--text:#e6edf5;--muted:#8b9bb5;--danger:#ef4444;--warn:#f59e0b}
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.6;min-height:100vh}
+.bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(0,201,167,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,201,167,.04) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;z-index:0}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+header{padding:24px 0;border-bottom:1px solid rgba(0,201,167,.12)}
+.brand{font-weight:800;font-size:24px;color:var(--accent);text-decoration:none;letter-spacing:.5px}
+.brand .small{color:var(--muted);font-weight:400;font-size:14px;margin-left:8px}
+.hero{padding:80px 0;text-align:center}
+.shield{font-size:64px;margin-bottom:16px;display:inline-block;animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.85}}
+.hero h1{font-size:52px;line-height:1.1;margin:0 0 16px;font-weight:800;color:var(--text)}
+.hero h1 .accent{background:linear-gradient(120deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:20px;color:var(--muted);max-width:680px;margin:0 auto 32px}
+.cta{display:inline-block;padding:16px 36px;background:var(--accent);color:var(--bg);text-decoration:none;border-radius:10px;font-weight:700;font-size:17px;margin:8px;transition:transform .2s,box-shadow .2s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,201,167,.3)}
+.cta.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.diagnostic{padding:60px 0;background:rgba(0,201,167,.03);border-top:1px solid rgba(0,201,167,.08);border-bottom:1px solid rgba(0,201,167,.08)}
+.diagnostic h2{font-size:32px;text-align:center;margin:0 0 12px}
+.diagnostic .sub{text-align:center;color:var(--muted);margin:0 0 40px}
+.q-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.q-card{background:var(--bg2);border:1px solid rgba(0,201,167,.15);border-radius:14px;padding:24px;transition:border-color .2s}
+.q-card:hover{border-color:var(--accent)}
+.q-card .num{display:inline-flex;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--bg);align-items:center;justify-content:center;font-weight:800;margin-bottom:12px}
+.q-card h3{margin:0 0 8px;font-size:18px}
+.q-card p{margin:0;color:var(--muted);font-size:15px}
+.risks{padding:80px 0}
+.risks h2{font-size:36px;text-align:center;margin:0 0 12px}
+.risks .sub{text-align:center;color:var(--muted);margin:0 0 48px}
+.risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.risk-card{background:var(--bg2);border:1px solid rgba(239,68,68,.2);border-radius:14px;padding:28px}
+.risk-card .icon{font-size:32px;margin-bottom:12px}
+.risk-card h3{margin:0 0 8px;color:var(--danger);font-size:20px}
+.risk-card .amount{font-size:28px;font-weight:800;color:var(--danger);margin:8px 0}
+.risk-card p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.solution{padding:80px 0;background:linear-gradient(180deg,rgba(0,201,167,.06),transparent)}
+.solution h2{font-size:36px;text-align:center;margin:0 0 12px}
+.solution .sub{text-align:center;color:var(--muted);margin:0 0 48px;max-width:680px;margin-left:auto;margin-right:auto}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.sol-card{background:var(--bg2);border:1px solid rgba(0,201,167,.2);border-radius:14px;padding:28px;transition:transform .2s}
+.sol-card:hover{transform:translateY(-4px)}
+.sol-card h3{margin:0 0 12px;font-size:22px;color:var(--accent)}
+.sol-card p{margin:0 0 16px;color:var(--muted)}
+.sol-card a{color:var(--accent);text-decoration:none;font-weight:600}
+.sol-card a:hover{text-decoration:underline}
+footer{padding:48px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid rgba(0,201,167,.08);margin-top:40px}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:640px){.hero h1{font-size:36px}.hero p.lead{font-size:17px}.shield{font-size:48px}}
+</style>
+</head>
+<body>
+<div class="bg-grid"></div>
+
+<header>
+  <div class="container">
+    <a href="/" class="brand">⚡ AEGIS-AI<span class="small">by TRESAAA</span></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="shield">🛡️</div>
+    <h1>Tu escudo IA<br>contra <span class="accent">sanciones legales</span></h1>
+    <p class="lead">Ley 1/2025 (desperdicio alimentario) ya en vigor. Verifactu obligatorio julio 2027. AEGIS-AI te dice en <strong>2 minutos</strong> si tu negocio está expuesto.</p>
+    <a href="#diagnostic" class="cta">⚡ Diagnóstico gratis</a>
+    <a href="https://factulens.com" class="cta secondary">Ver FactuLens →</a>
+  </div>
+</section>
+
+<section class="risks">
+  <div class="container">
+    <h2>⚠️ ¿Qué arriesgas?</h2>
+    <p class="sub">Sanciones por incumplimiento normativo en España (2026)</p>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <div class="icon">🥗</div>
+        <h3>Ley 1/2025 (Desperdicio)</h3>
+        <div class="amount">€2.001 - €500.000</div>
+        <p>Empresas alimentarias &gt;1.300 m² obligadas a tener plan prevención. Reincidencia = sanción muy grave.</p>
+      </div>
+      <div class="risk-card">
+        <div class="icon">📋</div>
+        <h3>Verifactu (julio 2027)</h3>
+        <div class="amount">€600 - €150.000</div>
+        <p>Toda empresa que emita facturas debe usar software certificado. Software no homologado = sanción por factura.</p>
+      </div>
+      <div class="risk-card">
+        <div class="icon">🔐</div>
+        <h3>RGPD (vigente)</h3>
+        <div class="amount">€20M o 4% facturación</div>
+        <p>Brecha datos personales sin notificar = multa máxima. Verificación automática anual recomendada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="diagnostic" class="diagnostic">
+  <div class="container">
+    <h2>🔍 Diagnóstico AEGIS-AI</h2>
+    <p class="sub">Responde 4 preguntas rápidas. AEGIS te dice en qué riesgo estás y cómo blindarte.</p>
+    <div class="q-grid">
+      <div class="q-card">
+        <div class="num">1</div>
+        <h3>¿Tu negocio gestiona alimentos?</h3>
+        <p>Restaurante · Supermercado · Distribuidor · Productor → Ley 1/2025 te aplica.</p>
+      </div>
+      <div class="q-card">
+        <div class="num">2</div>
+        <h3>¿Emites facturas?</h3>
+        <p>Autónomo o pyme → Verifactu obligatorio julio 2027. ¿Tu software ya está homologado?</p>
+      </div>
+      <div class="q-card">
+        <div class="num">3</div>
+        <h3>¿Manejas datos personales?</h3>
+        <p>Empleados · clientes · proveedores → RGPD aplica. Necesitas Registro Actividades.</p>
+      </div>
+      <div class="q-card">
+        <div class="num">4</div>
+        <h3>¿Tienes plan de prevención?</h3>
+        <p>Documento exigible en inspecciones. Si no lo tienes en 2026, ya estás sancionable.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:32px"><a href="mailto:vitin.ceo@gmail.com?subject=Quiero diagnóstico AEGIS-AI" class="cta">📩 Pedir diagnóstico personalizado</a></p>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="container">
+    <h2>🚀 Soluciones TRESAAA</h2>
+    <p class="sub">Después del diagnóstico, AEGIS te recomienda la herramienta exacta para blindar tu negocio</p>
+    <div class="sol-grid">
+      <div class="sol-card">
+        <h3>📱 FactuLens</h3>
+        <p>Facturación móvil con Verifactu certificado. Sin certificado digital. Apoderamiento Lintatalle SLU. Histórico precios.</p>
+        <a href="https://factulens.com">Empezar gratis →</a>
+      </div>
+      <div class="sol-card">
+        <h3>🥗 SurplusAI</h3>
+        <p>Marketplace excedentes alimentarios B2B. Compliance automático Ley 1/2025. Banco Alimentos integrado.</p>
+        <a href="https://surplusai.es">Ver marketplace →</a>
+      </div>
+      <div class="sol-card">
+        <h3>🌾 Desperdicio.es</h3>
+        <p>Landing SEO sobre Ley 1/2025. Recursos gratis: guías, plantillas plan prevención, normativa explicada.</p>
+        <a href="https://desperdicio.es">Recursos gratis →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>AEGIS-AI es una iniciativa de <a href="https://tresaaa.com">TRESAAA</a> · Operado por ZHURONG SL (CIF B21678081)</p>
+    <p>2026 · <a href="mailto:vitin.ceo@gmail.com">Contacto</a> · <a href="https://surplusai.es/privacy">Privacidad</a></p>
+  </div>
+</footer>
+</body>
+</html>
